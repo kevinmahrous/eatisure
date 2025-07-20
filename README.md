@@ -2,6 +2,7 @@
 
 **Checks Amazon items for banned ingredients.**  
 Eatisure checks Amazon's cart page for ingredients you've banned (e.g., allergens, dietary restrictions, etc.).
+
 ---
 
 ## 🚀 Features
