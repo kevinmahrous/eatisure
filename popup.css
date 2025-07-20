@@ -1,0 +1,158 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-height: 600px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.container {
+  width: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #232f3e;
+}
+
+.scan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #232f3e;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.scan-btn:hover:not(:disabled) {
+  background-color: #ebebeb;
+}
+
+.scan-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+#banned-input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  height: 70px;
+}
+
+#save-banned {
+  width: 100%;
+  padding: 10px;
+  background-color: #232f3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#save-banned:hover {
+  background-color: #1a2533;
+}
+
+#banned-list {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  user-select: none;
+}
+
+#result-section {
+  margin-top: 15px;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.results-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 15px;
+}
+
+.result-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.item-title {
+  font-weight: bold;
+  font-size: 15px;
+  color: #232f3e;
+  margin-bottom: 6px;
+}
+
+.item-ingredients {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.banned-label {
+  font-weight: bold;
+  color: #c0392b;
+  font-size: 14px;
+}
+
+.safe-label {
+  font-weight: bold;
+  color: #27ae60;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}

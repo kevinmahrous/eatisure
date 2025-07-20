@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Eatisure | Checks Amazon items for banned ingredients</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="icons/icon48.png" alt="Eatisure Logo" class="logo" />
+            <span class="title">Eatisure</span>
+        </div>
+
+        <button id="scan-amazon" class="scan-btn">
+            <img src="icons/amazon-logo.png"Amazon" class="btn-icon" /> Scan Amazon Cart
+        </button>
+
+        <textarea id="banned-input" rows="3" placeholder="Enter banned items, separated by commas (e.g. peanut, gluten, etc.)"></textarea>
+        <button id="save-banned">Save</button>
+
+        <div id="banned-list" class="banned-list">
+            <strong>Banned ingredients:</strong> <span id="banned-display"></span>
+        </div>
+
+        <section id="result-section" class="hidden">
+            <h2>Scan Results</h2>
+            <ul id="items-list" class="results-list"></ul>
+        </section>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

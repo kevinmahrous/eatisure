@@ -1,0 +1,52 @@
+{
+    "manifest_version": 2,
+    "name": "Eatisure",
+    "description": "Checks Amazon items for banned ingredients.",
+    "version": "1.0",
+    "permissions": [
+        "storage",
+        "tabs",
+        "*://*.amazon.com/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.amazon.com/*",
+                "*://smile.amazon.com/*",
+                "*://www.amazon.co.uk/*",
+                "*://www.amazon.eg/*",
+                "*://www.amazon.ca/*",
+                "*://www.amazon.de/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "eatisure@addon.local",
+            "strict_min_version": "91.0"
+        }
+    }
+}
